@@ -1,0 +1,10 @@
+arroz
+carne
+frango
+salda
+macarrao
+pao
+linguiça
+ovo
+feijao
+maionese
