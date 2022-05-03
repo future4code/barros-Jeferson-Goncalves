@@ -36,14 +36,53 @@
 
 // exercicio 1 escrita
 
-const bicho = Number(prompt('Quantos bichinho voce tem ?'))
-const nameBichos = []
-if (bicho == 0){
-  console.log('Que pena! Você pode adotar um pet!')
-} else {
-  for (let c = 0; c < bicho; c++){
-    const nome = prompt('Digite um por um nome do seu bichinho?')
-    nameBichos.push(nome)
-  }
+// const bicho = Number(prompt('Quantos bichinho voce tem ?'))
+// const nameBichos = []
+// if (bicho == 0){
+//   console.log('Que pena! Você pode adotar um pet!')
+// } else {
+//   for (let c = 0; c < bicho; c++){
+//     const nome = prompt('Digite um por um nome do seu bichinho?')
+//     nameBichos.push(nome)
+//   }
+// }
+// console.log(nameBichos)
+
+// exercicio 2
+
+const arrayOriginal = [2, 5, 6, 1, 7, 8, 50, 30, 10]
+
+for (valor of arrayOriginal){
+  console.log(valor)
 }
-console.log(nameBichos)
+
+for (valor of arrayOriginal){
+ const dividindo = valor / 10
+  console.log(dividindo)
+}
+
+for (valor of arrayOriginal){
+  if ((valor % 2) === 0){
+  newArray = [... arrayOriginal]
+    
+  }
+ }
+ console.log(newArray)
+
+for (let i = 0; i < arrayOriginal.length; i++){
+  console.log(`O elemento do index ${i} é: ${arrayOriginal[i]}`)  
+}
+
+
+let maior = 0
+let menor = arrayOriginal[0]
+
+for (let numero of arrayOriginal){
+  if (numero > maior){
+    maior = numero
+  } else if (numero < menor)
+  menor = numero
+}
+console.log(maior)
+console.log(menor)
+
