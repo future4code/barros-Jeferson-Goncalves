@@ -48,41 +48,89 @@
 // }
 // console.log(nameBichos)
 
-// exercicio 2
+// // exercicio 2
 
-const arrayOriginal = [2, 5, 6, 1, 7, 8, 50, 30, 10]
+// const arrayOriginal = [2, 5, 6, 1, 7, 8, 50, 30, 10]
 
-for (valor of arrayOriginal){
-  console.log(valor)
-}
+// for (valor of arrayOriginal){
+//   console.log(valor)
+// }
 
-for (valor of arrayOriginal){
- const dividindo = valor / 10
-  console.log(dividindo)
-}
+// for (valor of arrayOriginal){
+//  const dividindo = valor / 10
+//   console.log(dividindo)
+// }
 
-for (valor of arrayOriginal){
-  if ((valor % 2) === 0){
-  newArray = [... arrayOriginal]
+// for (valor of arrayOriginal){
+//   if ((valor % 2) === 0){
+//   newArray = [... arrayOriginal]
     
+//   }
+//  }
+//  console.log(newArray)
+
+// for (let i = 0; i < arrayOriginal.length; i++){
+//   console.log(`O elemento do index ${i} é: ${arrayOriginal[i]}`)  
+// }
+
+
+// let maior = 0
+// let menor = arrayOriginal[0]
+
+// for (let numero of arrayOriginal){
+//   if (numero > maior){
+//     maior = numero
+//   } else if (numero < menor)
+//   menor = numero
+// }
+// console.log(maior)
+// console.log(menor)
+
+
+// desafio 1
+
+// const numeroPensado = Number(prompt('Qual numero voce pensou?'))
+// console.log('Vamos jogar!!')
+
+// const chute = () => numero = Number(prompt('Tente acertar qual foi numero pensado:'))
+
+// let tentativa = 0
+
+// while (chute()){
+//   tentativa++
+//   if (numeroPensado === numero){
+//     console.log(` Acertou
+//     O numero de tentativas foi:${tentativa}`)
+//     break
+//   }else if (numeroPensado > numero){
+//     console.log(` O numero chutado foi: ${numero}
+//     Errrrrrouuuu, è maior`)
+//   }else if (numeroPensado < numero){
+//     console.log(` O numero chutado foi: ${numero}
+//     Errrrrrouuuu, è menor`)
+//   }
+// }
+
+// desafio 2
+
+const numeroPensado = Math.floor(Math.random() * 100)
+console.log('Vamos jogar!!')
+
+const chute = () => numero = Number(prompt('Tente acertar qual foi numero pensado:'))
+
+let tentativa = 0
+
+while (chute() || numero === 0){
+  tentativa++
+  if (numeroPensado === numero){
+    console.log(` Acertou
+    O numero de tentativas foi:${tentativa}`)
+    break
+  }else if (numeroPensado > numero){
+    console.log(` O numero chutado foi: ${numero}
+    Errrrrrouuuu, è maior`)
+  }else if (numeroPensado < numero){
+    console.log(` O numero chutado foi: ${numero}
+    Errrrrrouuuu, è menor`)
   }
- }
- console.log(newArray)
-
-for (let i = 0; i < arrayOriginal.length; i++){
-  console.log(`O elemento do index ${i} é: ${arrayOriginal[i]}`)  
 }
-
-
-let maior = 0
-let menor = arrayOriginal[0]
-
-for (let numero of arrayOriginal){
-  if (numero > maior){
-    maior = numero
-  } else if (numero < menor)
-  menor = numero
-}
-console.log(maior)
-console.log(menor)
-
