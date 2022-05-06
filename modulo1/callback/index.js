@@ -85,11 +85,13 @@ const nomeProdutos = produtos.map((item) => {
 console.log(nomeProdutos)
 
 const desconto = produtos.map((item) => {
-  let desconto = item.preco - (item.preco * 5) / 100
-  let nome = [{nome: item.nome}, {categoria: item.categoria},{preco: Number(desconto.toFixed(2))}]
-  return nome
+  const descontoValor = item.preco - (item.preco * 5) / 100
+  let valor = {
+    nome: item.nome, 
+    valor: Number(descontoValor.toFixed(3))}
+  return valor
 })
-console.log(...desconto)
+console.log(desconto)
 
 const bebidas = produtos.filter((item) => {
   return item.categoria === "Bebidas"
@@ -97,6 +99,43 @@ const bebidas = produtos.filter((item) => {
 console.log(bebidas)
 
 const ype = produtos.filter((item) => {
-  return item.nome == "Ypê"
+  return item.nome.includes("Ypê")
 })
 console.log(ype)
+
+
+const frase = ype.map((item) => {
+  const string = `Compre ${item.nome} por ${item.preco}`
+  return string
+})
+console.log(frase)
+
+
+// desafio 
+
+const pokemons = [
+  { nome: "Bulbasaur", tipo: "grama" },
+  { nome: "Bellsprout", tipo: "grama" },
+  { nome: "Charmander", tipo: "fogo" },
+  { nome: "Vulpix", tipo: "fogo" },
+  { nome: "Squirtle", tipo: "água" },
+  { nome: "Psyduck", tipo: "água" },
+]
+
+const nomesPokemons = pokemons.map((item) => {
+  return item.nome
+})
+console.log(nomesPokemons.sort())
+
+const tipos = pokemons.map((item) => {
+  return item.tipo
+})
+
+let newArrayTipos = []
+
+for (let nome of tipos){
+  if (newArrayTipos.toString().includes(nome) === false){
+    newArrayTipos.push(nome)
+  }
+}
+console.log(newArrayTipos)
