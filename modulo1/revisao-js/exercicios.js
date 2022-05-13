@@ -174,15 +174,29 @@ function retornaContasComSaldoAtualizado(contas) {
 }
 
 // EXERCÍCIO 15A
-function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  for(let i = 0; i < consultas.length; i++){
-    k = i+1
-    if (consultas[i].nome < consultas[k].nome){
-      consultas[i].nome = consultas[k].nome
-    }
+function retornaArrayOrdenadoAlfabeticamente(consultas){
+  const nome = []
+  for (let i = 0; i < consultas.length; i++){
+    const array = consultas[i].nome.split("")
+    nome.push(array)
   }
-  return consultas
+  const nomesOrdenados = nome.sort()
+
+  const ordenados = []
+
+  nomesOrdenados.map((nome) => {
+    nome = nome.toString().replaceAll(",", "")
+    consultas.map((dados, index) => {
+      if (dados.nome === nome){
+        ordenados.push(consultas[index])
+      }
+    })
+    
+  })
+  return ordenados
 }
+
+
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
@@ -190,6 +204,6 @@ function retornaArrayOrdenadoPorData(consultas) {
     consultas.sort((a, b) => { return a.dataDaConsulta.split("/")[i] - b.dataDaConsulta.split("/")[i]});
   }
   
-
+  console.log(consultas)
   return consultas
 }
