@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+body header {
+  margin-inline: auto;
+}
+
+#barra-menu {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 8vh;
+
+  background: rgb(192, 189, 189);
+}
+
+#barra-menu > a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#barra-menu ul {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+}
+
+#barra-menu a {
+  color: black;
+}
+
+#pag01 {
+  margin: auto;
+  display: flex;
+  max-width: 900px;
+  height: 92vh;
+  gap: 5rem;
+}
+
+#descricao,
+#imagem {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#pag01 img {
+  width: 65%;
+  height: 30%;
+  border-radius: 50%;
+  box-shadow: 0 2px 9px black;
+
+  opacity: 90%;
+}
+
+#descricao h1,
+#descricao p {
+  text-align: center;
+
+  margin-block: 50px;
+}
+
+#descricao a {
+  padding: 15px;
+  color: black;
+
+  border-radius: 10px;
+
+  background: rgba(50, 50, 50, 0.7);
+
+  text-align: center;
+}
+
+#pag02 {
+  width: 100%;
+  height: 100vh;
+}
+
+#pag02::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 400px;
+
+  background-color: aqua;
+
+  z-index: -1;
+}
+
+#conteudo {
+  max-width: 1200px;
+
+  text-align: center;
+  text-justify: center;
+
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+#local {
+  padding: 70px;
+}
+
+#local h3 {
+  margin-bottom: 20px;
+}
+
+#base {
+  display: flex;
+  border: 0.5px solid rgb(158, 155, 155);
+  border-radius: 20px;
+  background: white;
+}
+
+#base div {
+  padding: 5%;
+}
+
+#base i {
+  color: blueviolet;
+  padding: 30px;
+  font-size: 40px;
+}
+
+#base h4 {
+  margin: 10px 0 40px 0;
+}
+
+#base .p {
+  margin-bottom: 40px;
+}
+
+#base p {
+  margin-bottom: 5px;
+}
+
+#base h5 {
+  margin-bottom: 10px;
+}
+
+#base div + div {
+  border-left: 1px solid rgb(158, 155, 155);
+}
