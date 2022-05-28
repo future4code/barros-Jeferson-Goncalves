@@ -13,23 +13,16 @@ body {
   background-repeat: no-repeat;
 }
 
-body:before {
-  content: "";
-
-  position: absolute;
-  z-index: -1;
-
+#html {
   width: 100%;
-  height: 100vh;
-  background-color: rgb(238, 231, 231);
-  opacity: 0.7;
-
-  box-shadow: 0px 3px 5px black;
+  background-color: rgba(254, 254, 255, 0.849);
 }
 
-#container {
-  width: 1000px;
+#pag1 {
+  max-width: 1000px;
   margin-inline: auto;
+  padding: 10px;
+  margin-bottom: 100px;
 }
 
 nav {
@@ -40,21 +33,19 @@ nav {
   align-items: center;
 }
 
-main {
-  margin-top: 70px;
-}
-
 nav ul {
   display: flex;
   gap: 30px;
 
   list-style: none;
 }
+main {
+  margin-top: 100px;
+}
 
 main section {
   width: 100%;
   text-align: center;
-
   margin-bottom: 90px;
 }
 
@@ -68,7 +59,7 @@ main section h1 {
 main article {
   text-align: center;
   box-shadow: 0px 4px 5px black;
-  padding-block: 50px;
+  padding-block: 60px;
 }
 
 main article h2 {
@@ -80,31 +71,55 @@ main article p {
 }
 
 main aside {
-  margin-top: 100px;
-  text-align: center;
-  justify-content: center;
+  display: flex;
+  margin-block: 50px;
   width: 100%;
-  height: 300px;
 }
 
-main > aside:before {
+main > aside::before {
+  margin: auto;
   content: "";
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 10px solid rgb(67, 177, 23);
-  position: absolute;
   border-top-color: transparent;
 
   animation: load 1s linear infinite;
 }
 
 #logo {
-  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100px;
+  height: 80px;
+
+  position: relative;
 }
 
-#logo span {
-  animation: logo-animation 5s infinite;
+#j {
+  position: absolute;
+  left: -40px;
+  top: 16px;
+  opacity: 0;
+
+  animation: j 1s forwards;
+}
+#n {
+  position: absolute;
+  top: -53.5px;
+  left: 50px;
+
+  opacity: 0;
+
+  animation: n 1s forwards;
+}
+#g {
+  position: absolute;
+  left: 225px;
+  top: 17px;
+  opacity: 0;
+  animation: g 1s forwards;
 }
 
 @keyframes load {
@@ -116,14 +131,60 @@ main > aside:before {
   }
 }
 
-@keyframes logo-animation {
-  0% {
-    color: black;
+@keyframes j {
+  to {
+    transform: translateX(70px);
+    opacity: 1;
   }
-  10% {
-    transform: translateX(10px);
+}
+
+@keyframes n {
+  to {
+    transform: translateY(70px);
+    opacity: 1;
   }
-  50% {
-    /* transform: translateX(-20px); */
+}
+
+@keyframes g {
+  to {
+    transform: translateX(-150px);
+    opacity: 1;
   }
+}
+
+#pag2 {
+  position: relative;
+  max-width: 1000px;
+
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+
+  padding: 10px;
+}
+
+.habilidades > div {
+  text-align: center;
+  flex: 1 1 300px;
+
+  height: 300px;
+
+  box-shadow: 0 3px 5px black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
 }
