@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-image: url("public/daniel-korpai-pKRNxEguRgM-unsplash.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#html {
+  width: 100%;
+  background-color: rgba(254, 254, 255, 0.849);
+}
+
+#pag1 {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 10px;
+  margin-bottom: 100px;
+}
+
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+
+  list-style: none;
+}
+main {
+  margin-top: 100px;
+}
+
+main section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+main section h1 {
+  font-size: 3rem;
+  color: brown;
+
+  box-shadow: 0px 3px 5px black;
+}
+
+main article {
+  text-align: center;
+  box-shadow: 0px 4px 5px black;
+  padding-block: 60px;
+}
+
+main article h2 {
+  margin-bottom: 20px;
+}
+
+main article p {
+  margin-bottom: 20px;
+}
+
+main aside {
+  display: flex;
+  margin-block: 50px;
+  width: 100%;
+}
+
+main > aside::before {
+  margin: auto;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid rgb(67, 177, 23);
+  border-top-color: transparent;
+
+  animation: load 1s linear infinite;
+}
+
+#logo {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100px;
+  height: 80px;
+
+  position: relative;
+}
+
+#j {
+  position: absolute;
+  left: -40px;
+  top: 16px;
+  opacity: 0;
+
+  animation: j 1s forwards;
+}
+#n {
+  position: absolute;
+  top: -53.5px;
+  left: 50px;
+
+  opacity: 0;
+
+  animation: n 1s forwards;
+}
+#g {
+  position: absolute;
+  left: 225px;
+  top: 17px;
+  opacity: 0;
+  animation: g 1s forwards;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(-360deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes j {
+  to {
+    transform: translateX(70px);
+    opacity: 1;
+  }
+}
+
+@keyframes n {
+  to {
+    transform: translateY(70px);
+    opacity: 1;
+  }
+}
+
+@keyframes g {
+  to {
+    transform: translateX(-150px);
+    opacity: 1;
+  }
+}
+
+#pag2 {
+  position: relative;
+  max-width: 1000px;
+
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+
+  padding: 10px;
+}
+
+.habilidades > div {
+  text-align: center;
+  flex: 1 1 300px;
+
+  height: 300px;
+
+  box-shadow: 0 3px 5px black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
